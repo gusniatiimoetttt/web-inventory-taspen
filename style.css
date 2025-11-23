@@ -1,0 +1,155 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap');
+
+:root {
+    --primary-color: #004d99; /* Biru gelap, bisa disesuaikan dengan logo Taspen */
+    --secondary-color: #f5f6fa; /* Abu-abu terang */
+    --text-color: #444;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Navigasi */
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    background-color: #e9ecef;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #004d99;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+.nav-links a:hover {
+    background-color: #dee2e6;
+}
+
+/* Pesan Sukses & Error */
+.message, .error {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+.message {
+    background-color: #d4edda;
+    color: var(--success-color);
+}
+.error {
+    background-color: #f8d7da;
+    color: var(--error-color);
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Tombol */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+.btn-danger {
+    background-color: var(--error-color);
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #555;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
